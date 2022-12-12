@@ -14,3 +14,7 @@ output "CLIENT_SECRET" {
 output "CLIENT_CALLBACK_URLS" {
   value = aws_cognito_user_pool_client.this.callback_urls[*] == null ? null : aws_cognito_user_pool_client.this.callback_urls[*]
 }
+
+output "CLIENT_LOGOUT_URL" {
+  value = aws_cognito_user_pool_client.this.logout_urls[*] == null ? null : aws_cognito_user_pool_client.this.logout_urls[*]
+}
